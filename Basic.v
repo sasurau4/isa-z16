@@ -11,7 +11,7 @@ module Basic;
 
   wire w_x;
 
-  assign w_x = (r_a & ~r_s) | (r_b & r_s);
+  assign w_x = r_s ? r_b : r_a;
 
   initial begin
     r_a = 1'b0;
