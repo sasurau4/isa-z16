@@ -6,14 +6,21 @@ module Basic;
     $dumpvars(0, Basic);
   end
 
-  reg r_a;
-  reg r_b;
-  reg r_x;
+  reg  r_a;
+  reg  r_b;
+  reg  r_x;
   // --- おまじないここまで ---
 
-  wire [1:0] w_add;
+  wire w_c;
+  wire w_s;
 
-  assign w_add = r_a + r_b + r_x;
+  FullAdder FA (
+      .i_a(r_a),
+      .i_b(r_b),
+      .i_x(r_x),
+      .o_c(w_c),
+      .o_s(w_s)
+  );
 
   // --- おまじないここから ---
   initial begin
