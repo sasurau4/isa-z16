@@ -10,7 +10,7 @@ module Basic;
 
   wire w_x;
 
-  assign w_x = r_a | r_b;
+  assign w_x = r_a & r_b;
 
   initial begin
     r_a = 1'b0;
