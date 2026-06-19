@@ -1,2 +1,3 @@
 [tools]
 "github:chipsalliance/verible" = "v0.0-4071-g8d9f2c97"
+"github:YosysHQ/oss-cad-suite-build" = "2026-06-19"
