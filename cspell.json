@@ -7,6 +7,7 @@
     "ignoreWords": [
         "endcase",
         "endmodule", 
+        "endfunction",
         "dumpfile", 
         "dumpvars"
     ],
