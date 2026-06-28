@@ -16,6 +16,8 @@ module Z16CPU (
 
   wire [15:0] w_rs1_data;  // Data from source register 1
 
+  wire [15:0] w_alu_data;  // Data from ALU
+
   always @(posedge i_clk) begin
     if (i_rst) begin
       // reset
@@ -50,6 +52,13 @@ module Z16CPU (
       .i_rd_data(),
       .i_rd_addr(),
       .i_rd_wen()
+  );
+
+  Z16ALU ALU (
+      .i_data_a(w_rs1_data),  // Input from source register 1
+      .i_data_b(w_imm),  // Input from immediate value
+      .i_ctrl(w_alu_ctrl),  // ALU control signal
+      .o_data(w_alu_data)  // Output data from ALU
   );
 
   // Data Memory
