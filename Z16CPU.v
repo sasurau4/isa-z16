@@ -14,6 +14,8 @@ module Z16CPU (
   wire w_mem_wen;  // Wire for write enable for memory
   wire [3:0] w_alu_ctrl;  // Wire for ALU control signal
 
+  wire [15:0] w_rs1_data;  // Data from source register 1
+
   always @(posedge i_clk) begin
     if (i_rst) begin
       // reset
@@ -37,6 +39,17 @@ module Z16CPU (
       .o_rd_wen  (w_rd_wen),
       .o_mem_wen (w_mem_wen),
       .o_alu_ctrl(w_alu_ctrl)
+  );
+
+  Z16RegisterFile RegFile (
+      .i_clk(i_clk),
+      .i_rs1_addr(w_rs1_addr),  // Connect RS1 address
+      .o_rs1_data(w_rs1_data),  // Output data from RS1
+      .i_rs2_addr(),
+      .o_rs2_data(),
+      .i_rd_data(),
+      .i_rd_addr(),
+      .i_rd_wen()
   );
 
   // Data Memory
