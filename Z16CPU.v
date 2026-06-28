@@ -17,6 +17,7 @@ module Z16CPU (
   wire [15:0] w_rs1_data;  // Data from source register 1
 
   wire [15:0] w_alu_data;  // Data from ALU
+  wire [15:0] w_mem_rdata;  // Data read from memory
 
   always @(posedge i_clk) begin
     if (i_rst) begin
@@ -63,11 +64,11 @@ module Z16CPU (
 
   // Data Memory
   Z16DataMem DataMem (
-      .i_clk (),
-      .i_addr(),
-      .i_wen (),
+      .i_clk (i_clk),
+      .i_addr(w_alu_data),  // Address from ALU output
+      .i_wen (w_mem_wen),   // Write enable signal from decoder
       .i_data(),
-      .o_data()
+      .o_data(w_mem_rdata)  // Output data from memory
   );
 
 endmodule
