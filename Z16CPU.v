@@ -50,9 +50,9 @@ module Z16CPU (
       .o_rs1_data(w_rs1_data),  // Output data from RS1
       .i_rs2_addr(),
       .o_rs2_data(),
-      .i_rd_data(),
-      .i_rd_addr(),
-      .i_rd_wen()
+      .i_rd_data(w_mem_rdata),
+      .i_rd_addr(w_rd_addr),
+      .i_rd_wen(w_rd_wen)
   );
 
   Z16ALU ALU (
