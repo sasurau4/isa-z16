@@ -6,3 +6,18 @@
 
 - mise
 - `sudo apt install iverilog gtkwave`
+
+## Tutorial
+
+See tutorial dir
+
+## Z16
+
+### Load instr
+
+See wave
+
+```
+gtkwave ./dumpfiles/load_instr.vcd ./dumpfiles/load_instr.gtkw
+```
+

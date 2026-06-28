@@ -1,0 +1,72 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Sun Jun 28 14:50:27 2026
+[*]
+[dumpfile] "./dumpfiles/load_instr.vcd"
+[dumpfile_mtime] "Sun Jun 28 14:39:43 2026"
+[dumpfile_size] 4845
+[savefile] "./dumpfiles/load_instr.gtkw"
+[timestart] 0
+[size] 1146 811
+[pos] -1 -1
+*-1.208770 41 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Z16CPU_tb.
+[treeopen] Z16CPU_tb.CPU.
+[sst_width] 297
+[signals_width] 206
+[sst_expanded] 1
+[sst_vpaned_height] 231
+@28
+Z16CPU_tb.CPU.i_clk
+Z16CPU_tb.CPU.i_rst
+@200
+-Program Counter
+@22
+Z16CPU_tb.CPU.r_pc[15:0]
+@200
+-Instr Memory
+@22
+Z16CPU_tb.CPU.InstrMem.i_addr[15:0]
+Z16CPU_tb.CPU.InstrMem.o_instr[15:0]
+@200
+-Decoder
+@22
+Z16CPU_tb.CPU.Decoder.i_instr[15:0]
+Z16CPU_tb.CPU.Decoder.o_imm[15:0]
+Z16CPU_tb.CPU.Decoder.o_rd_addr[3:0]
+Z16CPU_tb.CPU.Decoder.o_rs1_addr[3:0]
+@28
+Z16CPU_tb.CPU.Decoder.o_rd_wen
+Z16CPU_tb.CPU.Decoder.o_mem_wen
+@22
+Z16CPU_tb.CPU.Decoder.o_alu_ctrl[3:0]
+@200
+-Register File
+@22
+Z16CPU_tb.CPU.RegFile.i_rs1_addr[3:0]
+Z16CPU_tb.CPU.RegFile.o_rs1_data[15:0]
+@200
+-ALU
+@22
+Z16CPU_tb.CPU.ALU.i_data_a[15:0]
+Z16CPU_tb.CPU.ALU.i_data_b[15:0]
+Z16CPU_tb.CPU.ALU.i_ctrl[3:0]
+Z16CPU_tb.CPU.ALU.o_data[15:0]
+@200
+-Data Memory
+@22
+Z16CPU_tb.CPU.DataMem.i_addr[15:0]
+@28
+Z16CPU_tb.CPU.DataMem.i_wen
+@22
+Z16CPU_tb.CPU.DataMem.o_data[15:0]
+@200
+-Register File
+@22
+Z16CPU_tb.CPU.RegFile.i_rd_addr[3:0]
+@28
+Z16CPU_tb.CPU.RegFile.i_rd_wen
+@22
+Z16CPU_tb.CPU.RegFile.i_rd_data[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

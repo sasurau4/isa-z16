@@ -29,7 +29,7 @@ module Z16CPU (
   end
 
   // Instruction Memory
-  Z16InstrMem InstrMem (
+  Z16InstrMemory InstrMem (
       .i_addr (r_pc),    // Address from Program Counter
       .o_instr(w_instr)
   );
@@ -63,7 +63,7 @@ module Z16CPU (
   );
 
   // Data Memory
-  Z16DataMem DataMem (
+  Z16DataMemory DataMem (
       .i_clk (i_clk),
       .i_addr(w_alu_data),  // Address from ALU output
       .i_wen (w_mem_wen),   // Write enable signal from decoder

@@ -1,0 +1,527 @@
+$date
+	Sun Jun 28 23:39:43 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Z16CPU_tb $end
+$var reg 1 ! i_clk $end
+$var reg 1 " i_rst $end
+$scope module CPU $end
+$var wire 1 ! i_clk $end
+$var wire 1 " i_rst $end
+$var wire 16 # w_rs1_data [15:0] $end
+$var wire 16 $ w_rs1_addr [15:0] $end
+$var wire 1 % w_rd_wen $end
+$var wire 16 & w_rd_addr [15:0] $end
+$var wire 1 ' w_mem_wen $end
+$var wire 16 ( w_mem_rdata [15:0] $end
+$var wire 16 ) w_instr [15:0] $end
+$var wire 16 * w_imm [15:0] $end
+$var wire 16 + w_alu_data [15:0] $end
+$var wire 4 , w_alu_ctrl [3:0] $end
+$var reg 16 - r_pc [15:0] $end
+$scope module ALU $end
+$var wire 16 . o_data [15:0] $end
+$var wire 16 / i_data_b [15:0] $end
+$var wire 16 0 i_data_a [15:0] $end
+$var wire 4 1 i_ctrl [3:0] $end
+$scope function alu $end
+$var reg 4 2 i_ctrl [3:0] $end
+$var reg 16 3 i_data_a [15:0] $end
+$var reg 16 4 i_data_b [15:0] $end
+$upscope $end
+$upscope $end
+$scope module DataMem $end
+$var wire 16 5 i_addr [15:0] $end
+$var wire 1 ! i_clk $end
+$var wire 16 6 i_data [15:0] $end
+$var wire 16 7 o_data [15:0] $end
+$var wire 1 ' i_wen $end
+$upscope $end
+$scope module Decoder $end
+$var wire 4 8 o_rs1_addr [3:0] $end
+$var wire 1 % o_rd_wen $end
+$var wire 4 9 o_rd_addr [3:0] $end
+$var wire 4 : o_opcode [3:0] $end
+$var wire 1 ' o_mem_wen $end
+$var wire 16 ; o_imm [15:0] $end
+$var wire 4 < o_alu_ctrl [3:0] $end
+$var wire 16 = i_instr [15:0] $end
+$scope function get_alu_ctrl $end
+$var reg 16 > i_instr [15:0] $end
+$upscope $end
+$scope function get_imm $end
+$var reg 16 ? i_instr [15:0] $end
+$upscope $end
+$scope function get_mem_wen $end
+$var reg 16 @ i_instr [15:0] $end
+$upscope $end
+$scope function get_rd_wen $end
+$var reg 16 A i_instr [15:0] $end
+$upscope $end
+$upscope $end
+$scope module InstrMem $end
+$var wire 16 B i_addr [15:0] $end
+$var wire 16 C o_instr [15:0] $end
+$upscope $end
+$scope module RegFile $end
+$var wire 1 ! i_clk $end
+$var wire 4 D i_rd_addr [3:0] $end
+$var wire 16 E i_rd_data [15:0] $end
+$var wire 1 % i_rd_wen $end
+$var wire 4 F i_rs1_addr [3:0] $end
+$var wire 4 G i_rs2_addr [3:0] $end
+$var wire 16 H o_rs2_data [15:0] $end
+$var wire 16 I o_rs1_data [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx I
+bx H
+bz G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+b0 <
+b0 ;
+bx :
+bx 9
+bx 8
+bx 7
+bz 6
+bx 5
+b0 4
+bx 3
+b0 2
+b0 1
+bx 0
+b0 /
+bx .
+bx -
+b0 ,
+bx +
+b0 *
+bx )
+bx (
+0'
+b0xxxx &
+0%
+b0xxxx $
+bx #
+1"
+0!
+$end
+#1
+b100 +
+b100 .
+b100 5
+b0 3
+b0 #
+b0 0
+b0 I
+b0 F
+b110 D
+b100 4
+b0 $
+b110 &
+b100000001101010 >
+b100000001101010 @
+1%
+b100000001101010 A
+b100 *
+b100 /
+b100 ;
+b100000001101010 ?
+b0 8
+b110 9
+b1010 :
+b100000001101010 )
+b100000001101010 =
+b100000001101010 C
+b0 -
+b0 B
+1!
+#2
+0!
+0"
+#3
+b0 D
+b0 +
+b0 .
+b0 5
+b0 4
+b0 &
+b0 >
+b0 @
+0%
+b0 A
+b0 *
+b0 /
+b0 ;
+b0 ?
+b0 9
+b0 :
+b0 )
+b0 =
+b0 C
+b10 -
+b10 B
+1!
+#4
+0!
+#5
+b100 -
+b100 B
+1!
+#6
+0!
+#7
+b1000 D
+b1000 &
+b10001010 >
+b10001010 @
+1%
+b10001010 A
+b10001010 ?
+b1000 9
+b1010 :
+b10001010 )
+b10001010 =
+b10001010 C
+b110 -
+b110 B
+1!
+#8
+0!
+#9
+b0 D
+b0 &
+b0 >
+b0 @
+0%
+b0 A
+b0 ?
+b0 9
+b0 :
+b0 )
+b0 =
+b0 C
+b1000 -
+b1000 B
+1!
+#10
+0!
+#11
+bx +
+bx .
+bx 5
+bx 3
+bx #
+bx 0
+bx I
+bx F
+bx D
+b0xxxx $
+b0xxxx &
+bx >
+bx @
+bx A
+bx ?
+bx 8
+bx 9
+bx :
+bx )
+bx =
+bx C
+b1010 -
+b1010 B
+1!
+#12
+0!
+#13
+b1100 -
+b1100 B
+1!
+#14
+0!
+#15
+b1110 -
+b1110 B
+1!
+#16
+0!
+#17
+b10000 -
+b10000 B
+1!
+#18
+0!
+#19
+b10010 -
+b10010 B
+1!
+#20
+0!
+#21
+b10100 -
+b10100 B
+1!
+#22
+0!
+#23
+b10110 -
+b10110 B
+1!
+#24
+0!
+#25
+b11000 -
+b11000 B
+1!
+#26
+0!
+#27
+b11010 -
+b11010 B
+1!
+#28
+0!
+#29
+b11100 -
+b11100 B
+1!
+#30
+0!
+#31
+b11110 -
+b11110 B
+1!
+#32
+0!
+#33
+b100000 -
+b100000 B
+1!
+#34
+0!
+#35
+b100010 -
+b100010 B
+1!
+#36
+0!
+#37
+b100100 -
+b100100 B
+1!
+#38
+0!
+#39
+b100110 -
+b100110 B
+1!
+#40
+0!
+#41
+b101000 -
+b101000 B
+1!
+#42
+0!
+#43
+b101010 -
+b101010 B
+1!
+#44
+0!
+#45
+b101100 -
+b101100 B
+1!
+#46
+0!
+#47
+b101110 -
+b101110 B
+1!
+#48
+0!
+#49
+b110000 -
+b110000 B
+1!
+#50
+0!
+#51
+b110010 -
+b110010 B
+1!
+#52
+0!
+#53
+b110100 -
+b110100 B
+1!
+#54
+0!
+#55
+b110110 -
+b110110 B
+1!
+#56
+0!
+#57
+b111000 -
+b111000 B
+1!
+#58
+0!
+#59
+b111010 -
+b111010 B
+1!
+#60
+0!
+#61
+b111100 -
+b111100 B
+1!
+#62
+0!
+#63
+b111110 -
+b111110 B
+1!
+#64
+0!
+#65
+b1000000 -
+b1000000 B
+1!
+#66
+0!
+#67
+b1000010 -
+b1000010 B
+1!
+#68
+0!
+#69
+b1000100 -
+b1000100 B
+1!
+#70
+0!
+#71
+b1000110 -
+b1000110 B
+1!
+#72
+0!
+#73
+b1001000 -
+b1001000 B
+1!
+#74
+0!
+#75
+b1001010 -
+b1001010 B
+1!
+#76
+0!
+#77
+b1001100 -
+b1001100 B
+1!
+#78
+0!
+#79
+b1001110 -
+b1001110 B
+1!
+#80
+0!
+#81
+b1010000 -
+b1010000 B
+1!
+#82
+0!
+#83
+b1010010 -
+b1010010 B
+1!
+#84
+0!
+#85
+b1010100 -
+b1010100 B
+1!
+#86
+0!
+#87
+b1010110 -
+b1010110 B
+1!
+#88
+0!
+#89
+b1011000 -
+b1011000 B
+1!
+#90
+0!
+#91
+b1011010 -
+b1011010 B
+1!
+#92
+0!
+#93
+b1011100 -
+b1011100 B
+1!
+#94
+0!
+#95
+b1011110 -
+b1011110 B
+1!
+#96
+0!
+#97
+b1100000 -
+b1100000 B
+1!
+#98
+0!
+#99
+b1100010 -
+b1100010 B
+1!
+#100
+0!
+#101
+b1100100 -
+b1100100 B
+1!
+#102
+0!
