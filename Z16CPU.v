@@ -7,9 +7,9 @@ module Z16CPU (
   reg [15:0] r_pc;
 
   wire [15:0] w_instr;
-  wire [15:0] w_rd_addr;  // Wire for destination register address
-  wire [15:0] w_rs1_addr;  // Wire for source register 1 address
-  wire [15:0] w_rs2_addr;
+  wire [3:0] w_rd_addr;  // Wire for destination register address
+  wire [3:0] w_rs1_addr;  // Wire for source register 1 address
+  wire [3:0] w_rs2_addr;
   wire [15:0] w_imm;  // Wire for immediate value
   wire w_rd_wen;  // Wire for write enable for destination register
   wire w_mem_wen;  // Wire for write enable for memory
