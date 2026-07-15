@@ -1,0 +1,51 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Wed Jul 15 14:13:31 2026
+[*]
+[dumpfile] "/home/sasurau4/ghq/github.com/sasurau4/isa-z16/wave.vcd"
+[dumpfile_mtime] "Wed Jul 15 14:03:44 2026"
+[dumpfile_size] 5041
+[savefile] "/home/sasurau4/ghq/github.com/sasurau4/isa-z16/dumpfiles/store_instr.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-1.808770 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Z16CPU_tb.
+[treeopen] Z16CPU_tb.CPU.
+[sst_width] 297
+[signals_width] 224
+[sst_expanded] 1
+[sst_vpaned_height] 158
+@28
+Z16CPU_tb.i_rst
+Z16CPU_tb.i_clk
+@22
+Z16CPU_tb.CPU.Decoder.o_opcode[3:0]
+@200
+-Register File
+@22
+Z16CPU_tb.CPU.RegFile.i_rs2_addr[3:0]
+Z16CPU_tb.CPU.RegFile.o_rs2_data[15:0]
+@200
+-Data Memory(Store)
+@22
+Z16CPU_tb.CPU.DataMem.i_addr[15:0]
+@28
+Z16CPU_tb.CPU.DataMem.i_wen
+@22
+Z16CPU_tb.CPU.DataMem.i_data[15:0]
+@200
+-Data Memory(Load)
+@22
+Z16CPU_tb.CPU.DataMem.i_addr[15:0]
+Z16CPU_tb.CPU.DataMem.o_data[15:0]
+@200
+-Register File
+@22
+Z16CPU_tb.CPU.RegFile.i_rd_addr[3:0]
+@28
+Z16CPU_tb.CPU.RegFile.i_rd_wen
+@22
+Z16CPU_tb.CPU.RegFile.i_rd_data[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

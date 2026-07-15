@@ -1,0 +1,552 @@
+$date
+	Wed Jul 15 23:03:44 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Z16CPU_tb $end
+$var reg 1 ! i_clk $end
+$var reg 1 " i_rst $end
+$scope module CPU $end
+$var wire 1 ! i_clk $end
+$var wire 1 " i_rst $end
+$var wire 16 # w_rs2_data [15:0] $end
+$var wire 4 $ w_rs2_addr [3:0] $end
+$var wire 16 % w_rs1_data [15:0] $end
+$var wire 4 & w_rs1_addr [3:0] $end
+$var wire 1 ' w_rd_wen $end
+$var wire 4 ( w_rd_addr [3:0] $end
+$var wire 1 ) w_mem_wen $end
+$var wire 16 * w_mem_rdata [15:0] $end
+$var wire 16 + w_instr [15:0] $end
+$var wire 16 , w_imm [15:0] $end
+$var wire 16 - w_alu_data [15:0] $end
+$var wire 4 . w_alu_ctrl [3:0] $end
+$var reg 16 / r_pc [15:0] $end
+$scope module ALU $end
+$var wire 16 0 o_data [15:0] $end
+$var wire 16 1 i_data_b [15:0] $end
+$var wire 16 2 i_data_a [15:0] $end
+$var wire 4 3 i_ctrl [3:0] $end
+$scope function alu $end
+$var reg 4 4 i_ctrl [3:0] $end
+$var reg 16 5 i_data_a [15:0] $end
+$var reg 16 6 i_data_b [15:0] $end
+$upscope $end
+$upscope $end
+$scope module DataMem $end
+$var wire 16 7 i_addr [15:0] $end
+$var wire 1 ! i_clk $end
+$var wire 16 8 o_data [15:0] $end
+$var wire 1 ) i_wen $end
+$var wire 16 9 i_data [15:0] $end
+$upscope $end
+$scope module Decoder $end
+$var wire 4 : o_rs2_addr [3:0] $end
+$var wire 4 ; o_rs1_addr [3:0] $end
+$var wire 1 ' o_rd_wen $end
+$var wire 4 < o_rd_addr [3:0] $end
+$var wire 4 = o_opcode [3:0] $end
+$var wire 1 ) o_mem_wen $end
+$var wire 16 > o_imm [15:0] $end
+$var wire 4 ? o_alu_ctrl [3:0] $end
+$var wire 16 @ i_instr [15:0] $end
+$scope function get_alu_ctrl $end
+$var reg 16 A i_instr [15:0] $end
+$upscope $end
+$scope function get_imm $end
+$var reg 16 B i_instr [15:0] $end
+$upscope $end
+$scope function get_mem_wen $end
+$var reg 16 C i_instr [15:0] $end
+$upscope $end
+$scope function get_rd_wen $end
+$var reg 16 D i_instr [15:0] $end
+$upscope $end
+$upscope $end
+$scope module InstrMem $end
+$var wire 16 E i_addr [15:0] $end
+$var wire 16 F o_instr [15:0] $end
+$upscope $end
+$scope module RegFile $end
+$var wire 1 ! i_clk $end
+$var wire 4 G i_rd_addr [3:0] $end
+$var wire 16 H i_rd_data [15:0] $end
+$var wire 1 ' i_rd_wen $end
+$var wire 4 I i_rs1_addr [3:0] $end
+$var wire 4 J i_rs2_addr [3:0] $end
+$var wire 16 K o_rs2_data [15:0] $end
+$var wire 16 L o_rs1_data [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+b0 ?
+b0 >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+b0 6
+bx 5
+b0 4
+b0 3
+bx 2
+b0 1
+bx 0
+bx /
+b0 .
+bx -
+b0 ,
+bx +
+bx *
+0)
+bx (
+0'
+bx &
+bx %
+bx $
+bx #
+1"
+0!
+$end
+#1
+b100 -
+b100 0
+b100 7
+b100 6
+b0 5
+b0 #
+b0 9
+b0 K
+b0 %
+b0 2
+b0 L
+b1001011 A
+1)
+b1001011 C
+b1001011 D
+b100 ,
+b100 1
+b100 >
+b1001011 B
+b0 $
+b0 :
+b0 J
+b0 &
+b0 ;
+b0 I
+b100 (
+b100 <
+b100 G
+b1011 =
+b1001011 +
+b1001011 @
+b1001011 F
+b0 /
+b0 E
+1!
+#2
+0!
+0"
+#3
+bx #
+bx 9
+bx K
+b100000001011010 A
+0)
+b100000001011010 C
+1'
+b100000001011010 D
+b100000001011010 B
+b100 $
+b100 :
+b100 J
+b101 (
+b101 <
+b101 G
+b1010 =
+b100000001011010 +
+b100000001011010 @
+b100000001011010 F
+b10 /
+b10 E
+b0 *
+b0 8
+b0 H
+1!
+#4
+0!
+#5
+bx *
+bx 8
+bx H
+b0 -
+b0 0
+b0 7
+b0 6
+b0 #
+b0 9
+b0 K
+b0 A
+b0 C
+0'
+b0 D
+b0 ,
+b0 1
+b0 >
+b0 B
+b0 $
+b0 :
+b0 J
+b0 (
+b0 <
+b0 G
+b0 =
+b0 +
+b0 @
+b0 F
+b100 /
+b100 E
+1!
+#6
+0!
+#7
+b110 /
+b110 E
+1!
+#8
+0!
+#9
+b1000 /
+b1000 E
+1!
+#10
+0!
+#11
+bx -
+bx 0
+bx 7
+bx 5
+bx #
+bx 9
+bx K
+bx %
+bx 2
+bx L
+bx A
+bx C
+bx D
+bx B
+bx $
+bx :
+bx J
+bx &
+bx ;
+bx I
+bx (
+bx <
+bx G
+bx =
+bx +
+bx @
+bx F
+b1010 /
+b1010 E
+1!
+#12
+0!
+#13
+b1100 /
+b1100 E
+1!
+#14
+0!
+#15
+b1110 /
+b1110 E
+1!
+#16
+0!
+#17
+b10000 /
+b10000 E
+1!
+#18
+0!
+#19
+b10010 /
+b10010 E
+1!
+#20
+0!
+#21
+b10100 /
+b10100 E
+1!
+#22
+0!
+#23
+b10110 /
+b10110 E
+1!
+#24
+0!
+#25
+b11000 /
+b11000 E
+1!
+#26
+0!
+#27
+b11010 /
+b11010 E
+1!
+#28
+0!
+#29
+b11100 /
+b11100 E
+1!
+#30
+0!
+#31
+b11110 /
+b11110 E
+1!
+#32
+0!
+#33
+b100000 /
+b100000 E
+1!
+#34
+0!
+#35
+b100010 /
+b100010 E
+1!
+#36
+0!
+#37
+b100100 /
+b100100 E
+1!
+#38
+0!
+#39
+b100110 /
+b100110 E
+1!
+#40
+0!
+#41
+b101000 /
+b101000 E
+1!
+#42
+0!
+#43
+b101010 /
+b101010 E
+1!
+#44
+0!
+#45
+b101100 /
+b101100 E
+1!
+#46
+0!
+#47
+b101110 /
+b101110 E
+1!
+#48
+0!
+#49
+b110000 /
+b110000 E
+1!
+#50
+0!
+#51
+b110010 /
+b110010 E
+1!
+#52
+0!
+#53
+b110100 /
+b110100 E
+1!
+#54
+0!
+#55
+b110110 /
+b110110 E
+1!
+#56
+0!
+#57
+b111000 /
+b111000 E
+1!
+#58
+0!
+#59
+b111010 /
+b111010 E
+1!
+#60
+0!
+#61
+b111100 /
+b111100 E
+1!
+#62
+0!
+#63
+b111110 /
+b111110 E
+1!
+#64
+0!
+#65
+b1000000 /
+b1000000 E
+1!
+#66
+0!
+#67
+b1000010 /
+b1000010 E
+1!
+#68
+0!
+#69
+b1000100 /
+b1000100 E
+1!
+#70
+0!
+#71
+b1000110 /
+b1000110 E
+1!
+#72
+0!
+#73
+b1001000 /
+b1001000 E
+1!
+#74
+0!
+#75
+b1001010 /
+b1001010 E
+1!
+#76
+0!
+#77
+b1001100 /
+b1001100 E
+1!
+#78
+0!
+#79
+b1001110 /
+b1001110 E
+1!
+#80
+0!
+#81
+b1010000 /
+b1010000 E
+1!
+#82
+0!
+#83
+b1010010 /
+b1010010 E
+1!
+#84
+0!
+#85
+b1010100 /
+b1010100 E
+1!
+#86
+0!
+#87
+b1010110 /
+b1010110 E
+1!
+#88
+0!
+#89
+b1011000 /
+b1011000 E
+1!
+#90
+0!
+#91
+b1011010 /
+b1011010 E
+1!
+#92
+0!
+#93
+b1011100 /
+b1011100 E
+1!
+#94
+0!
+#95
+b1011110 /
+b1011110 E
+1!
+#96
+0!
+#97
+b1100000 /
+b1100000 E
+1!
+#98
+0!
+#99
+b1100010 /
+b1100010 E
+1!
+#100
+0!
+#101
+b1100100 /
+b1100100 E
+1!
+#102
+0!
