@@ -14,10 +14,12 @@ module Z16CPU (
   wire w_rd_wen;  // Wire for write enable for destination register
   wire w_mem_wen;  // Wire for write enable for memory
   wire [3:0] w_alu_ctrl;  // Wire for ALU control signal
+  wire [3:0] w_opcode;
 
   wire [15:0] w_rs1_data;  // Data from source register 1
   wire [15:0] w_rs2_data;
 
+  wire [15:0] w_data_b;
   wire [15:0] w_alu_data;  // Data from ALU
   wire [15:0] w_mem_rdata;  // Data read from memory
 
@@ -38,6 +40,7 @@ module Z16CPU (
 
   Z16Decoder Decoder (
       .i_instr   (w_instr),
+      .o_opcode  (w_opcode),
       .o_rd_addr (w_rd_addr),
       .o_rs1_addr(w_rs1_addr),
       .o_rs2_addr(w_rs2_addr),
@@ -58,11 +61,12 @@ module Z16CPU (
       .i_rd_wen(w_rd_wen)
   );
 
+  assign w_data_b = (w_opcode <= 8'h8) ? w_rs2_data : w_imm;
   Z16ALU ALU (
       .i_data_a(w_rs1_data),  // Input from source register 1
-      .i_data_b(w_imm),  // Input from immediate value
-      .i_ctrl(w_alu_ctrl),  // ALU control signal
-      .o_data(w_alu_data)  // Output data from ALU
+      .i_data_b(w_data_B),
+      .i_ctrl  (w_alu_ctrl),  // ALU control signal
+      .o_data  (w_alu_data)   // Output data from ALU
   );
 
   // Data Memory
