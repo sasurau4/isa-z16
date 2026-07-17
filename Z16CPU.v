@@ -18,9 +18,11 @@ module Z16CPU (
 
   wire [15:0] w_rs1_data;  // Data from source register 1
   wire [15:0] w_rs2_data;
+  wire [15:0] w_rd_data;
 
   wire [15:0] w_data_b;
   wire [15:0] w_alu_data;  // Data from ALU
+
   wire [15:0] w_mem_rdata;  // Data read from memory
 
   always @(posedge i_clk) begin
@@ -50,13 +52,14 @@ module Z16CPU (
       .o_alu_ctrl(w_alu_ctrl)
   );
 
+  assign w_rd_data = (w_opcode[3:0] == 4'hA) ? w_mem_rdata : w_alu_data;
   Z16RegisterFile RegFile (
       .i_clk(i_clk),
       .i_rs1_addr(w_rs1_addr),  // Connect RS1 address
       .o_rs1_data(w_rs1_data),  // Output data from RS1
       .i_rs2_addr(w_rs2_addr),
       .o_rs2_data(w_rs2_data),
-      .i_rd_data(w_mem_rdata),
+      .i_rd_data(w_rd_data),
       .i_rd_addr(w_rd_addr),
       .i_rd_wen(w_rd_wen)
   );
