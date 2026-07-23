@@ -67,7 +67,7 @@ module Z16CPU (
   assign w_data_b = (w_opcode <= 8'h8) ? w_rs2_data : w_imm;
   Z16ALU ALU (
       .i_data_a(w_rs1_data),  // Input from source register 1
-      .i_data_b(w_data_B),
+      .i_data_b(w_data_b),
       .i_ctrl  (w_alu_ctrl),  // ALU control signal
       .o_data  (w_alu_data)   // Output data from ALU
   );
